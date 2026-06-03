@@ -1,0 +1,8 @@
+version: '3.8'
+
+services:
+  backend-api:
+    build: .
+    ports:
+      - "80:8000"  # [핵심] 외부(EC2) 80번 포트를 컨테이너 내부 8000번 포트와 연결!
+    restart: always  # [과제 조건] 서버가 꺼지거나 오류가 나도 무조건 자동 재시작
